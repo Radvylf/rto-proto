@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Run This Online</title>
+        
+        <meta name="author" content="Ryan Tosh (Redwolf Programs)">
+        <meta name="description" content="Interpreter for Risky">
+        <meta name="keywords" content="Risky,Interpreter,Risky Interpreter,Online Interpreter,RedwolfPrograms,Redwolf Programs,Ryan Tosh">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="style/fonts.css"/>
+        <link rel="stylesheet" href="style/main.css"/>
+        
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <b>Code:</b>
+        
+        <div class="grow_wrap">
+            <textarea id="code" rows="1" cols="100" oninput="this.parentNode.dataset.replicated = this.value"></textarea>
+        </div>
+
+        <b>Input:</b>
+
+        <div class="grow_wrap">
+            <textarea id="input" rows="1" cols="100" placeholder="[]" oninput="this.parentNode.dataset.replicated = this.value"></textarea>
+        </div>
+
+        <button id="run">Run</button>
+        
+        <hr/>
+        
+        <b>Output:</b>
+        
+        <div class="grow_wrap">
+            <textarea id="output" rows="1" cols="100" onInput="this.parentNode.dataset.replicated = this.value" readonly></textarea>
+        </div>
+    </body>
+</html>
