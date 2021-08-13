@@ -1,0 +1,99 @@
+body {
+    margin: 16px;
+    padding: 0;
+    border: 0;
+    
+    font-family: "Roboto Mono", consolas, courier, monospace;
+    
+    line-height: 1.5;
+}
+
+body > *, .grow_wrap > * {
+    display: block;
+}
+
+code, textarea {
+    font-family: "Roboto Mono", consolas, courier, monospace;
+    
+    color: #404040;
+}
+
+b {
+    margin-bottom: 10px;
+    
+    font-size: 12px;
+}
+
+.grow_wrap {
+    display: grid;
+}
+
+.grow_wrap::after {
+    content: attr(data-replicated) " ";
+    
+    white-space: pre-wrap;
+    visibility: hidden;
+}
+
+.grow_wrap > textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+textarea, .grow_wrap::after {
+    margin-bottom: 16px;
+    padding: 6px;
+    
+    border: 1px solid #808080;
+    
+    font: inherit;
+    font-size: 10px;
+    line-height: 1.25;
+    word-break: break-all;
+    
+    background-color: inherit;
+    
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+hr {
+    margin: 16px;
+    margin-top: 4px;
+    
+    border: 0;
+    
+    height: 1px;
+    
+    background-color: #808080;
+}
+
+button {
+    margin-bottom: 20px;
+    margin-right: 16px;
+    padding: 6px 16px;
+    
+    border: 1px solid #808080;
+    cursor: pointer;
+    
+    color: inherit;
+    
+    font: inherit;
+    font-size: 10px;
+    
+    background-color: inherit;
+}
+
+textarea:focus, select:focus, button:focus {
+    border: 1px solid #60a0f0;
+    outline: 1px solid #60a0f0;
+}
+
+textarea::placeholder {
+    margin-bottom: -1px;
+    
+    color: #808080;
+    
+    font-size: 10px;
+    line-height: 1.25;
+    word-break: break-all;
+}
